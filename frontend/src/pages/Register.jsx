@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
 
-const API = 'http://127.0.0.1:8000'
+const API = 'https://ecommerce-ai-backend-mj6s.onrender.com'
 
 function Register() {
   const navigate  = useNavigate()

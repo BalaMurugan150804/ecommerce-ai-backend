@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts'
 
-const API = 'http://127.0.0.1:8000'
+const API = 'https://ecommerce-ai-backend-mj6s.onrender.com'
 
 const SEGMENT_COLORS = {
   Premium:  '#8b5cf6',

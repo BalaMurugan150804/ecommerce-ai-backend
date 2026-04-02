@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
-const API = 'http://127.0.0.1:8000'
-
+const API = 'https://ecommerce-ai-backend-mj6s.onrender.com'
 const ROLE_COLORS = {
   admin:    'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400',
   seller:   'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400',

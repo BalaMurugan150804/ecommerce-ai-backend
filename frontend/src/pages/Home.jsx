@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts'
 
-const API = 'http://127.0.0.1:8000'
+const API = 'https://ecommerce-ai-backend-mj6s.onrender.com'
 
 const SEGMENT_COLORS = {
   Champions: '#10b981',
