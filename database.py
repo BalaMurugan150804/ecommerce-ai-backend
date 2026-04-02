@@ -4,10 +4,10 @@ database.py — PostgreSQL connection using SQLAlchemy
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-
+import os
 # ── Database URL ───────────────────────────────────────────────────────────────
 # Format: postgresql://username:password@host:port/database_name
-DATABASE_URL = "postgresql://neondb_owner:npg_YWOVEHA4jk5D@ep-curly-credit-a19yvvs6-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://neondb_owner:npg_YWOVEHA4jk5D@ep-curly-credit-a19yvvs6-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require")
 
 # ── Engine & Session ───────────────────────────────────────────────────────────
 engine = create_engine(DATABASE_URL, pool_pre_ping=True)

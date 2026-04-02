@@ -1,9 +1,6 @@
 __pycache__/
-*.pkl
 *.pyc
 .env
 data/
-outputs/
-models/
 *.xlsx
 venv/
