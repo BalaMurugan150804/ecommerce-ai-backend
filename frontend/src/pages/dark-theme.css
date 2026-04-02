@@ -1,0 +1,58 @@
+/* ============================================================
+   PASTE THESE STYLES INTO YOUR index.css / global CSS FILE
+   ============================================================ */
+
+/* Dark background — deep navy, not plain gray */
+:root {
+  --bg-base:    #080e1a;   /* deepest background */
+  --bg-surface: #0d1525;   /* page/layout background */
+  --bg-card:    rgba(255, 255, 255, 0.04);
+  --border:     rgba(255, 255, 255, 0.08);
+  --text-muted: rgba(148, 163, 184, 0.7);
+}
+
+html, body, #root {
+  min-height: 100vh;
+  background-color: var(--bg-surface);
+  color: #f8fafc;
+}
+
+/* Subtle grid dot pattern on the background */
+body {
+  background-image:
+    radial-gradient(ellipse 80% 50% at 20% -10%, rgba(56,189,248,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(167,139,250,0.07) 0%, transparent 60%),
+    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0);
+  background-size: 100% 100%, 100% 100%, 28px 28px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: rgba(255,255,255,0.03); border-radius: 10px; }
+::-webkit-scrollbar-thumb { background: rgba(148,163,184,0.2); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(148,163,184,0.35); }
+
+/* ============================================================
+   IF YOU HAVE A LAYOUT/SIDEBAR WRAPPER, apply this bg:
+   ============================================================ */
+
+/* sidebar */
+.sidebar {
+  background: rgba(255, 255, 255, 0.03);
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+}
+
+/* main content area */
+.main-content {
+  background: transparent;
+}
+
+/* ============================================================
+   Tailwind dark mode — add this to tailwind.config.js:
+   module.exports = {
+     darkMode: 'class',   <-- or remove dark: prefix usage
+     ...
+   }
+   And add class="dark" to your <html> tag for dark mode.
+   ============================================================ */
