@@ -76,18 +76,7 @@ def load_and_clean(path: str, sheet: str) -> pd.DataFrame:
 # ══════════════════════════════════════════════════════════════════════════════
 
 def build_basket_matrix(df: pd.DataFrame):
-    """
-    Group items per invoice and create a one-hot encoded basket matrix.
-
-    Rows    = invoices (transactions)
-    Columns = products
-    Values  = 1 if product was in that invoice, 0 otherwise
-
-    Example:
-        Invoice  | PHONE CASE | SCREEN PROTECTOR | NOTEBOOK
-        12345    |     1      |        1         |    0
-        12346    |     0      |        1         |    1
-    """
+    
     print("\n[2/6] Building basket matrix …")
 
     # Group items per invoice
@@ -119,12 +108,7 @@ def build_basket_matrix(df: pd.DataFrame):
 # ══════════════════════════════════════════════════════════════════════════════
 
 def run_apriori(basket: pd.DataFrame) -> pd.DataFrame:
-    """
-    Mine frequent itemsets using the Apriori algorithm.
-
-    min_support = 0.02 means the itemset must appear in
-    at least 2% of all transactions.
-    """
+    
     print(f"\n[3/6] Running Apriori (min_support={MIN_SUPPORT}) …")
     print(f"      This may take 1–2 minutes …")
 

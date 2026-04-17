@@ -88,17 +88,7 @@ def load_and_clean(path: str, sheet: str) -> pd.DataFrame:
 # ══════════════════════════════════════════════════════════════════════════════
 
 def build_product_features(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Compute 5 features per product:
-
-    avg_price         = average unit price across all transactions
-    total_quantity    = total units sold
-    num_transactions  = number of invoices the product appeared in
-    num_customers     = number of unique customers who bought it
-    total_revenue     = total revenue generated (£)
-
-    These 5 features let K-Means separate products into meaningful groups.
-    """
+   
     print("\n[2/6] Engineering product features …")
 
     product_features = (
